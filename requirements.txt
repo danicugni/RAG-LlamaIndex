@@ -3,3 +3,4 @@ llama-index-llms-azure-openai<=0.2.2
 openpyxl<=3.1.5
 llama-index-embeddings-huggingface<=0.3.1
 typing<=3.7.4.3
+python-dotenv<=1.0.1

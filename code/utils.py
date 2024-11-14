@@ -1,6 +1,5 @@
 from dotenv import load_dotenv
 import tiktoken
-import nest_asyncio
 from pathlib import Path
 
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings, StorageContext, load_index_from_storage, get_response_synthesizer
@@ -12,7 +11,7 @@ from llama_index.llms.azure_openai import AzureOpenAI
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_parse import LlamaParse
 
-
+import nest_asyncio
 nest_asyncio.apply()
 
 
@@ -111,3 +110,5 @@ def get_query_engine(index:VectorStoreIndex, similarity_top_k:int = 5, similarit
         raise ValueError('Please, choose between "high-level" and "low-level".')
 
     return query_engine
+
+

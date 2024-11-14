@@ -1,4 +1,6 @@
 .env
 .venv
 data
+storage
 demo.ipynb
+__pycache__
