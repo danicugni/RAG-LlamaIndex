@@ -7,10 +7,10 @@ git clone <repository_url>
 cd RAG-LlamaIndex
 ```
 
-2. Create and activate a virtual environment:
+2. Create and activate a virtual environment (on WSL):
 ```bash
-py -3.10 -m venv .venv
-.venv\Scripts\activate  # On Windows
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
 3. Install the required dependencies:
