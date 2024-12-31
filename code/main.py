@@ -1,6 +1,5 @@
 from pathlib import Path
-from utils import get_index, get_query_engine
-
+from utils import get_index, get_query_engine, get_retriever
 
 def main():
 
@@ -9,9 +8,9 @@ def main():
     dir_original_data = Path(dir_original_data)
     dir_indexed_data = Path(dir_indexed_data)
     query = input('Enter search query: ')
-    type_query_engine = input("Enter query engine type: ")
-    index = get_index(dir_original_data= dir_original_data, dir_indexed_data= dir_indexed_data)
-    query_engine = get_query_engine(index, type_query_engine=type_query_engine)
+    index = get_index(dir_original_data=dir_original_data, dir_indexed_data=dir_indexed_data)
+    retriever = get_retriever(index)
+    query_engine = get_query_engine(retriever)
     response = query_engine.query(query)
     print(response)
 
